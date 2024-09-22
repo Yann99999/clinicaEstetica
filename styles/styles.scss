@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+    font-family: "Montagu Slab", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+body{
+    box-sizing: border-box;
+    background-image: url(https://esteticacrisalys.com.br/wp-content/uploads/2015/04/fundo-estetica-facial-clinica-de-estetica-em-santo-andre.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 650px;
+    background-attachment: fixed;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+.action-btn{
+    margin: 5px 10px;
+    padding: 10px;
+}
+.action-btn:hover{
+    transform: scale(1.1);
+}
+.btn-contact{
+    color: #fff;
+    background-color: #9c039f;
+    border: 2px solid #9c039f;
+    transition: 1s ease 0s;
+}
+.btn-contact:hover{
+    color: #9c039f;
+    background-color: #fff;
+    border: 2px solid #9c039f;
+    box-shadow: 0 0 0 .1em #9c039f;
+}
+.btn-service{
+    color: #9c039f;
+    background-color: #fff;
+    border: 2px solid #9c039f;
+    transition: 1s ease 0s;
+}
+.btn-service:hover{
+    color: #fff;
+    background-color: #9c039f;
+    border: 2px solid #9c039f;
+    box-shadow: 0 0 0 .1em aliceblue;
+}
+.check-icon{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+.mobile-icons{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-container{
+        width: 100%;
+        min-height: 150px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        border-bottom: 1px solid #7b027d;
+
+        .logo-box > img{
+            object-fit: fill;
+            width: 150px;
+            height: 150px;
+        }
+
+        .menu-nav > nav > ul {
+            display: none;
+            
+            li{
+                margin: 0 10px;
+            }
+        }
+
+        .menu-mobile{
+            position: fixed;
+            top: 0;
+            right: -340px;
+            transition: 1s ease 0s;
+            width: 320px;
+            height: 100%;
+            z-index: 50;
+            background-color: white;
+            box-shadow: 0 0 .4em rgb(16, 16, 16);
+
+            .list-mobile{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 140px;
+
+                li > a{
+                    color: #7b027d;
+                }
+            }
+        }
+    }
+    .intro-container{
+        margin: 80px auto;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+
+        h1{
+            font-size: 2.5em;
+            color: #9c039f;
+        }
+        p{
+            font-size: 1em;
+            font-weight: 500;
+            margin-bottom: 50px;
+        }
+        .area-btn{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .benefits-container{
+        width: 100%;
+        padding: 15px;
+        background-color: hsla(299, 98%, 23%, 0.8);
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-items: center;
+
+        div{
+            width: 70%;
+            min-height: 150px;
+            background-color: #fcfcf0;
+            box-shadow: 0 0 .6em black;
+            text-align: left;
+            padding: 20px;
+
+            h3{
+                font-size: 1.3em;
+                color: #9c039f;
+                font-weight: 400;
+            }
+        }
+    }
+    .services-container{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        div{
+            text-align: center;
+
+            h2{
+                color: #9c039f;
+                text-transform: uppercase;
+            }
+        }
+
+        .services-grid{
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            width: 95%;
+
+            .services-card{
+                background-color: #f1f1f1;
+                width: 80%;
+                box-shadow: 0 0 .4em rgb(0, 0, 0);
+                min-height: 300px;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: left;
+                overflow: hidden;
+
+                .card-image{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                }
+
+                h4{
+                    font-size: 1.2em;
+                    margin-left: 5px;
+                    font-weight: 400;
+                }
+                p{
+                    font-size: .9em;
+                    margin-left: 5px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .aboutus-container{
+
+        display: flex;
+        flex-direction: column;
+        margin: 50px auto;
+        gap: 10px;
+        align-items: center;
+
+        div{
+            padding: 20px;
+            background-color: rgba(156, 3, 159, 0.5);
+            backdrop-filter: blur(5px);
+            width: 100%;
+        }
+        h2{
+            text-align: center;
+            color: rgb(156, 3, 159);
+            text-transform: uppercase;
+        }
+        p{
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+            letter-spacing: 1;
+            width: 50%;
+            margin: 0 auto;
+            font-weight: 900;
+        }
+    }
+}
+@media only screen and (min-width: 600px) {
+    .header-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #7b027d;
+        min-height: 150px;
+        
+        .logo-box > img{
+            display: none;
+        }
+
+        .menu-nav > nav > ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        
+            li > a{
+                margin: 0 15px;
+                color: #7b027d;
+            }
+        }
+        span{
+            display: none;
+        }
+        .menu-mobile{
+            display: none;
+        }
+    }
+    .intro-container{
+        margin: 30px 0 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 40%;
+        margin-left: 120px;
+
+        h1{
+            font-size: 2em;
+            color: #9c039f;
+        }
+        p{
+            font-size: 1em;
+            font-weight: 500;
+            margin-bottom: 50px;
+        }
+        .area-btn{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .benefits-container{
+        padding: 15px;
+        background-color: hsla(299, 98%, 23%, 0.8);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+
+        div{
+            width: 70%;
+            height: 180px;
+            background-color: #fcfcf0;
+            box-shadow: 0 0 .6em black;
+            text-align: left;
+            padding: 20px;
+
+            h3{
+                font-size: 1.3em;
+                color: #9c039f;
+                font-weight: 400;
+            }
+        }
+    }
+    .services-container{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        div{
+            text-align: center;
+
+            h2{
+                color: #9c039f;
+                text-transform: uppercase;
+            }
+        }
+
+        .services-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            width: 95%;
+
+            .services-card{
+                background-color: #f1f1f1;
+                width: 90%;
+                box-shadow: 0 0 .4em rgb(0, 0, 0);
+                height: 500px;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: end;
+                text-align: left;
+                overflow: hidden;
+                position: relative;
+
+                .card-image{
+                    top: 0;
+                    position: absolute;
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+                h4{
+                    font-size: 1em;
+                    margin-left: 5px;
+                    font-weight: 400;
+                    margin-top: 300px;
+                }
+                p{
+                    font-size: .9em;
+                    margin-left: 5px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .aboutus-container{
+
+        display: flex;
+        flex-direction: column;
+        margin: 50px auto;
+        gap: 10px;
+        align-items: center;
+
+        div{
+            padding: 20px;
+            background-color: rgba(156, 3, 159, 0.5);
+            backdrop-filter: blur(5px);
+            width: 100%;
+        }
+        h2{
+            text-align: center;
+            color: rgb(156, 3, 159);
+            text-transform: uppercase;
+        }
+        p{
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+            letter-spacing: 1;
+            width: 50%;
+            margin: 0 auto;
+            font-weight: 900;
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    .header-container{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .header-container{
+        justify-content: space-around;
+        .logo-box > img{
+            height: 150px;
+            width: 150px;
+            display: block;
+        }
+    }
+    .intro-container{
+        margin-top: 100px;
+
+        .area-btn{
+            flex-direction: row;
+        }
+    }
+    .benefits-container{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    
+    }
+    .services-container{
+        .services-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            width: 90%;
+
+            .services-card{
+                background-color: #f1f1f1;
+                width: 90%;
+                box-shadow: 0 0 .4em rgb(0, 0, 0);
+                height: 550px;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: end;
+                text-align: left;
+                overflow: hidden;
+                position: relative;
+
+            }
+        }
+    }
+}
+
+
+.footer{
+    height: 70px;
+    color: #fff;
+    background-color: #7b027d;
+    text-align: center;
+}
+
+
+
+
+/* From Uiverse.io by gharsh11032000 */ 
+.form-container {
+    margin: 50px auto;
+    width: 400px;
+    background-color: #979797;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+  }
+  
+  .form-container button:active {
+    scale: 0.95;
+  }
+  
+  .form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  
+  .form-container .form-group input {
+    width: 89%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #fff;
+  }
+  
+  .form-container .form-group textarea {
+    width: 89%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    font-family: inherit;
+  }
+  
+  .form-container .form-group input::placeholder {
+    opacity: 0.5;
+  }
+  
+  .form-container .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #ffffff;
+    font-weight: 600;
+    width: 40%;
+    background: #ff00c8;
+    border: 1px solid #ff00d4;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .form-container .form-submit-btn:hover {
+    transform: scale(1.1);
+    transition: 1s ease 0s;
+  }
+  
+  
+  
+  
